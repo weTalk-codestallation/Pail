@@ -14,6 +14,8 @@ exports.update = ( req, res ) => {
     p.userName = req.body.userName
     p.profilePicURL = req.body.profilePicURL
     p.zipcode = req.body.zipcode
+    p.gender= req.body.gender
+    p.age=req.body.age
 
     // make a call to zicode server to look up the city and state
     // and store them in the profile ....

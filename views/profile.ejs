@@ -5,10 +5,15 @@
         <hr>
         <p> Welcome <%= user.googlename %>
             with email <%= user.googleemail %>
-            You are logged in to Swatching.
+            You are logged in to Swatching.<br><br>
 
-        <p> <%= user.zipcode %> <%= user.city %> <%= user.state %>
-        </p>Last updated on <%= user.lastUpdate %> </p>
+            Nickname: <%= user.userName %> <br>
+            Age: <%= user.age %><br>
+            Gender:<%= user.gender %>
+        <p> zipcode: <%= user.zipcode %> <br>
+           location:<%= user.city %> <%= user.state %>
+        </p>
+        <p>Last updated on <%= user.lastUpdate %> </p>
         <a href="/editProfile">edit profile</a>
     </div>
 

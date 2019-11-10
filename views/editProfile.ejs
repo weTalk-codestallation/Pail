@@ -10,9 +10,26 @@
         <p> Last updated on <%= user.lastUpdate %> </p>
         <hr>
         <form method="post" action="/updateProfile">
-            userName: <input type="text" name="userName" value="<%= user.userName %>"><br>
+            userName: <input type="text" name="userName" value="<%= user.userName %>"><br><br>
+            gender: <select class="form-control" name="gender">
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Other</option>
+                      <option>Prefer not to say</option>
+                    </select>
+            age:  <select class="form-control" name="age">
+                    <option>10-20</option>
+                    <option>20-30</option>
+                    <option>30-40</option>
+                    <option>40-50</option>
+                    <option>50-60</option>
+                    <option>60-70</option>
+                    <option>70-80</option>
+                    <option>other</option>
+                    <option>prefer not to say</option>
+                  </select>
             profilePicURL: <input type="text" name="profilePicURL"
-                value="<%= user.profilePicURL %>"><br>
+                value="<%= user.profilePicURL %>"><br><br>
             zipcode: <input type="text" name="zipcode"
                 value="<%= user.zipcode %>"><br>
             <input type="submit" class="btn btn-lg btn-primary">

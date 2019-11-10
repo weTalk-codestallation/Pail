@@ -16,8 +16,10 @@ var userSchema = Schema( {
   lastUpdate: Date,
   userName: String,
   zipcode: String,
- city: String,
- state: String
+  city: String,
+  state: String,
+  age: String,
+  gender: String
 } );
 
 module.exports = mongoose.model( 'User', userSchema );
