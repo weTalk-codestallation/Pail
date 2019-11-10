@@ -1,0 +1,9 @@
+<%- include('header') -%>
+
+<form method="post" action="/filterProfile">
+    zipcode: <input type="text" name="zipcode"
+        value="<%= user.zipcode %>"><br>
+    <input type="submit" class="btn btn-lg btn-primary">
+</form>
+
+<%- include('footer') -%>

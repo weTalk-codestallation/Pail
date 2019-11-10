@@ -1,23 +1,23 @@
 <%- include('header') -%>
     <div class="jumbotron">
-        <h1>YellowCartwheel Profile for <%= user.userName %></h1>
+        <h1>Profile for <%= user.userName %></h1>
         <img src="<%= user.profilePicURL%>" width="200">
         <hr>
         <p> Welcome <%= user.googlename %>
             with email <%= user.googleemail %>
-            You are logged in to YellowCartwheel.
+            You are logged in.
         </p>
         <p> Last updated on <%= user.lastUpdate %> </p>
         <hr>
         <form method="post" action="/updateProfile">
             userName: <input type="text" name="userName" value="<%= user.userName %>"><br><br>
-            gender: <select class="form-control" name="gender">
+            gender: <select class="form-control" name="gender" value="<%= user.gender %>">
                       <option>Male</option>
                       <option>Female</option>
                       <option>Other</option>
                       <option>Prefer not to say</option>
                     </select>
-            age:  <select class="form-control" name="age">
+            age:  <select class="form-control" name="age" value="<%= user.age %>">
                     <option>10-20</option>
                     <option>20-30</option>
                     <option>30-40</option>

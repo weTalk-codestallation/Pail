@@ -1,0 +1,21 @@
+<%- include('header') -%>
+    <div class="jumbotron">
+        <h1>profile</h1>
+    </div>
+    <ol>
+
+    <% for(i = 0; i<profile.length; i++){  %>
+       <% if( user.userName!=profile[i].userName) {%>
+          <li>
+              <a href="/showProfile/<%= profile[i]._id %>">
+                user: <%= profile[i].userName %> <br>
+              </a>
+              Age: <%= profile[i].age %><br>
+              Gender:<%= profile[i].gender %> <br>
+              zipcode: <%= profile[i].zipcode %> <br>
+              location:<%= profile[i].city %> <%= profile[i].state%> <br>
+          </li>
+        <% } %>
+    <% } %>
+    </ol>
+<%- include('footer') -%>

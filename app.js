@@ -153,13 +153,20 @@ app.get('/editProfile',isLoggedIn, (req,res)=>{
     res.render('editProfile')
 })
 
+app.get('/showNear',isLoggedIn, (req,res)=>{
+    res.render('showNear')
+})
+
+app.get('/showNearby',isLoggedIn, (req,res)=>{
+    res.render('showNearby')
+})
+
 app.get('/profiles', isLoggedIn, profileController.getAllProfiles);
 app.get('/showProfile/:id', isLoggedIn, profileController.getOneProfile);
 
-
-
 app.post('/updateProfile',profileController.update)
 
+app.post('/filterProfile',profileController.filterProfile)
 
 // END OF THE AUTHENTICATION ROUTES
 
@@ -177,7 +184,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 app.get('/', function(req, res, next) {
-  res.render('index',{title:"Swatching"});
+  res.render('index',{title:"Pair"});
 });
 
 

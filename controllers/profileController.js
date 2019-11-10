@@ -50,6 +50,7 @@ exports.getAllProfiles = ( req, res ) => {
   User.find()
     .exec()
     .then( ( profiles ) => {
+
       res.render( 'profiles', {
         profiles:profiles, title:"Profiles"
       } );
@@ -82,4 +83,29 @@ exports.getOneProfile = ( req, res ) => {
     .then( () => {
       //console.log( 'skill promise complete' );
     } );
+};
+
+exports.filterProfile = ( req, res ) => {
+  //gconsle.log('in getAllSkills')
+  const zip=req.body.zipcode
+  const id = req._id
+
+  User.find({zipcode:zip, _id:{ $ne: id }})
+    .exec()
+    .then( ( profile ) =>{
+      console.log("hi, babe"),
+      console.log(profile),
+      res.render( 'showNearby', {
+        profile:profile, title:"Profile"
+      } );
+    } )
+    .catch( ( error ) => {
+      console.log( error.message );
+      return [];
+    } )
+    .then( () => {
+      //console.log( 'skill promise complete' );
+    } );
+
+
 };
