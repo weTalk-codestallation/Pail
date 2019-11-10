@@ -6,9 +6,12 @@
     <% for(i = 0; i<profiles.length; i++){  %>
         <li>
             <a href="/showProfile/<%= profiles[i]._id %>">
-              user: <%= profiles[i].googlename %>
-              
+              user: <%= profiles[i].userName %> <br>
             </a>
+            Age: <%= profiles[i].age %><br>
+            Gender:<%= profiles[i].gender %> <br>
+            zipcode: <%= profiles[i].zipcode %> <br>
+            location:<%= profiles[i].city %> <%= profiles[i].state%> <br>
         </li>
     <% } %>
     </ol>

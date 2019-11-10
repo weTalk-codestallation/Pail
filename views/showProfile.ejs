@@ -3,14 +3,12 @@
    <h1>Profile for <%= profile.userName %></h1>
    <img src="<%= profile.profilePicURL%>" width="200">
    <hr>
-   <p> Welcome <%= profile.googlename %>
-       with email <%= profile.googleemail %>
-       You are logged in.
+   <p> This is <%= profile.googlename %>'s profile
    </p>
 
-   Nickname: <%= profile.userName %>
-   Age: <%= profile.age %>
-   Gender:<%= profile.gender %>
+   Nickname: <%= profile.userName %> <br>
+   Age: <%= profile.age %><br>
+   Gender:<%= profile.gender %><br><br>
 
    <p> Last updated on <%= profile.lastUpdate %> </p>
 </div>
