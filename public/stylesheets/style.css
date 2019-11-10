@@ -2,7 +2,9 @@
    GLOBAL STYLES
    ============================================================== */
 body {
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif; 
+  background: url("http://www.kukud.net/jiaju/UploadFiles_9067/201310/20131023213828179.jpg")
+}
 
 h1 {
   font-size: 72px;
@@ -59,7 +61,7 @@ p {
    HEADER
    ============================================================== */
 .nav-menu {
-  
+
   position: absolute;
   z-index: 1;
   top: 0;
@@ -213,7 +215,7 @@ p {
   position: relative;
   padding: 24px;
   width: 33%;
-  
+
   border-top: none;
   border-right: none;
   border-bottom: none;
@@ -614,7 +616,7 @@ footer {
     -ms-flex: 100%;
     flex: 100%; } }
 
-/* 
+/*
    BOOKING PAGE
    */
 /* ==============================================================
