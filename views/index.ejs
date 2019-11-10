@@ -9,7 +9,7 @@
     <meta name="keywords" content="#">
     <!-- Page Title -->
     <title>Listing &amp; Directory Website Template</title>
-  
+
     <link rel="stylesheet" href="stylesheets/bootstrap.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheets">
@@ -27,7 +27,7 @@
 
 <body>
     <!--============================= HEADER =============================-->
-    
+
     <!-- SLIDER -->
     <section class="slider d-flex align-items-center">
         <div class="container">
@@ -44,12 +44,14 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <form class="form-wrap mt-4">
+
+                                <form class="form-wrap mt-4" method="post" action="/filterProfile">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <input type="text" placeholder="Please enter your zip code" class="btn-group1">
-                                        <input type="text" placeholder="Breakfast, lunch or dinner?" class="btn-group2">
+                                        <input type="text" placeholder="Please enter your zip code" class="btn-group1" name="zipcode" >
+                                          <value="<%= user.zipcode %>">
                                         <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                     </div>
+
                                 </form>
                                 <!--<div class="slider-link">-->
                                     <!--<a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>-->
@@ -59,12 +61,11 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!--// SLIDER -->
     <!--//END HEADER -->
     <!--============================= FOOTER =============================-->
-    
+
     <!--//END FOOTER -->
 
     <!-- jQuery, Bootstrap JS. -->
@@ -74,7 +75,7 @@
     <script src="js/bootstrap.min.js"></script>
 
     <script>
-        $(window).scroll(function() { 
+        $(window).scroll(function() {
             // 100 = The point you would like to fade the nav in.
 
             if ($(window).scrollTop() > 100) {
@@ -86,7 +87,7 @@
                 $('.fixed').removeClass('is-sticky');
 
             };
-       }); 
+       });
     </script>
 </body>
 <%- include('footer') -%>
