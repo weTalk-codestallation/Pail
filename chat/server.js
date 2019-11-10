@@ -21,14 +21,17 @@ io.sockets.on('connection',function(socket){
 	socket.on('disconnnect',function(data){
 
 		users.splice(users.indexOf(socket.username),1);
-		updateUsernames();
+		io.sockets.emit('get users',users);
+
+		io.sockets.emit('new message',{msg:data,user:socket.username});
+		
 		connections.splice(connections.indexOf(socket),1);
 		console.log('Disonnected: %s sockets connected',connections.length);
 	});
 	
 //send message
 	socket.on('send message',function(data){
-		io.sockets.emit('new message',{msg:data,user: socket.username});
+		io.sockets.emit('new message',{msg:data,user:socket.username});
 	});
 
 //new user
@@ -37,10 +40,7 @@ io.sockets.on('connection',function(socket){
 		socket.username = data;
 		console.log(socket.username);
 		users.push(socket.username);
-		updateUsernames();
-	});
-	function updateUsernames(){
 		io.sockets.emit('get users',users);
-	}
+	});
 
 });
