@@ -187,6 +187,9 @@ app.get('/', function(req, res, next) {
   res.render('index',{title:"Pair"});
 });
 
+app.get('/finder', function(req, res, next) {
+  res.render('finder',{title:"Exploring"});
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
