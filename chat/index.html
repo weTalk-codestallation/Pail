@@ -8,7 +8,6 @@
 	<script src="/socket.io/socket.io.js"></script>
 
 	
-
 	<style>
 		body{
 			margin-top:30px;
@@ -25,7 +24,7 @@
 	<div class = "container">
 		<div id= "userFormArea" class ="row">
 			<div class="col-md-12">
-				<form id="userForm">
+				<form id="loginFeature">
 					<div class ="form-group">
 						<label>Enter Username</label>
 						<input class ="form-control" id ="username"/>
@@ -48,7 +47,7 @@
 			<div class="col-md-8">
 				<div class="chat" id="chat"></div>
 
-				<form id="messageForm">
+				<form id="messageFeature">
 					<div class ="form-group">
 						<label>Enter Message</label>
 						<textarea class ="form-control" id ="message"></textarea>
@@ -63,26 +62,26 @@
 	<script>
 		$(function(){
 			var socket = io.connect();
-			var $messageForm = $('#messageForm');
+			var $messageFeature = $('#messageFeature');
             var $message = $('#message');
             var $chat = $('#chat');
             var $messageArea = $('#messageArea');
             var $userFormArea = $('#userFormArea');
-            var $userForm = $('#userForm');
+            var $loginFeature = $('#loginFeature');
             var $users = $('#users');
             var $username = $('#username');
 
-			$messageForm.submit(function(e){
+			$messageFeature.submit(function(e){
 				e.preventDefault();
 				socket.emit('send message',$message.val());
 				$message.val('');
 			});
 
 			socket.on('new message',function(data){
-				$chat.append('<div class="well"><strong>'+data.user+'</strong>: '+data.msg+'</div>');
+				$chat.append('<div class="well"><strong>'+data.userList+'</strong>: '+data.messageList+'</div>');
 			});
 
-			$userForm.submit(function(e){
+			$loginFeature.submit(function(e){
 				e.preventDefault();
 				socket.emit('new user',$username.val(),function(data){
 					if (data){
