@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-size: 72px;
-  color: rgb(36, 22, 22);
+  color: white;
   font-weight: 300; }
   @media (max-width: 1200px) {
     h1 {
@@ -59,6 +59,7 @@ p {
    HEADER
    ============================================================== */
 .nav-menu {
+  
   position: absolute;
   z-index: 1;
   top: 0;
@@ -151,7 +152,7 @@ p {
   padding: 0 8px 0 0; }
 
 .slider {
-  background: url(../images/slider.jpg) no-repeat;
+  background: url("http://www.kukud.net/jiaju/UploadFiles_9067/201310/20131023213828179.jpg") no-repeat;
   background-size: cover;
   min-height: 800px; }
   @media (max-width: 992px) {
@@ -197,10 +198,12 @@ p {
   padding: 24px;
   width: 40%;
   border-top-left-radius: 3px;
+  /* background:rgb(42, 42, 63); */
   border-bottom-left-radius: 3px;
   border: none; }
   @media (max-width: 576px) {
     .btn-group1 {
+      /* color: burlywood; */
       width: 100%;
       border-radius: 3px;
       margin: 0 0 10px;
@@ -210,6 +213,7 @@ p {
   position: relative;
   padding: 24px;
   width: 33%;
+  
   border-top: none;
   border-right: none;
   border-bottom: none;
