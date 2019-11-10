@@ -60,18 +60,17 @@
 		</div>
 	</div>
 
-	<script type="text/javascript">
+	<script>
 		$(function(){
 			var socket = io.connect();
-			var $messageForm =$('messageForm');
-			var $message =$('message');
-			var $chat=$('#chat');
-
-			var $messageArea = $('#messageArea');
-			var $userFormArea = $('#userFormArea');
-			var $userForm = $('#userForm');
-			var $users = $('#users');
-			var $username = $('#username');
+			var $messageForm = $('#messageForm');
+            var $message = $('#message');
+            var $chat = $('#chat');
+            var $messageArea = $('#messageArea');
+            var $userFormArea = $('#userFormArea');
+            var $userForm = $('#userForm');
+            var $users = $('#users');
+            var $username = $('#username');
 
 			$messageForm.submit(function(e){
 				e.preventDefault();
